@@ -1,3 +1,3 @@
-from rplib import some_fn
+from rplib import *
 
-print(some_fn())
+print(arg(2))
