@@ -8,8 +8,8 @@ create_exception!(module, SomeError, Exception);
 #[pyfunction]
 fn arg(m: &PyAny) -> PyResult<&PyFloat> {
     match m.downcast::<PyFloat>() {
-        Err(e) => println!("AAA"), TypeError::py_err("AAAA"),
-        Ok(value) => value
+        Err(e) => println!("AAA"),
+        Ok(value) => Ok(value),
     }
 }
 
